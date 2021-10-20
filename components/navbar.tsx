@@ -1,0 +1,73 @@
+import { Box, Link, Text, Stack, Flex, IconButton } from "@chakra-ui/react";
+import { FunctionComponent, MouseEventHandler, useState } from "react";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import Logo from "./logo";
+
+// Inspired by https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react
+
+export const MenuToggle: FunctionComponent<{
+  toggle: MouseEventHandler;
+  isOpen: boolean;
+}> = ({ toggle, isOpen }) => {
+  return (
+    <>
+      <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+        <IconButton
+          aria-label="Toggle Menu"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+        />
+      </Box>
+    </>
+  );
+};
+
+export const MenuItem: FunctionComponent<{
+  isLast?: boolean;
+  to?: string;
+}> = ({ children, isLast = false, to = "/", ...rest }) => {
+  return (
+    <Link href={to}>
+      <Text display="block" {...rest} fontSize="xl">
+        {children}
+      </Text>
+    </Link>
+  );
+};
+
+export const ShogiMenu: FunctionComponent = (props) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Flex
+        as="nav"
+        align="center"
+        justify="space-between"
+        wrap="wrap"
+        w="100%"
+        padding="1rem 3rem"
+        {...props}
+      >
+        <Logo w="200px" />
+        <MenuToggle toggle={toggle} isOpen={isOpen} />
+        <Box
+          display={{ base: isOpen ? "block" : "none", md: "block" }}
+          flexBasis={{ base: "100%", md: "auto" }}
+        >
+          <Stack
+            spacing={8}
+            align="center"
+            justify={["center", "space-between", "flex-end", "flex-end"]}
+            direction={["column", "row", "row", "row"]}
+            pt={[4, 4, 0, 0]}
+          >
+            <MenuItem>Home</MenuItem>
+            <MenuItem to="/tutorial/pieces">Pieces</MenuItem>
+          </Stack>
+        </Box>
+      </Flex>
+    </div>
+  );
+};

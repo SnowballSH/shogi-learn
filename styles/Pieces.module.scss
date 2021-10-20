@@ -1,7 +1,19 @@
 .main {
-  padding: 4rem 3rem;
+  padding: 3rem 3rem;
 }
 
 .pieceTitle {
+  font-weight: bold;
+  padding-bottom: 3rem;
+}
+
+.pieceIntro {
+  b {
+    color: #f0759a;
+  }
+}
+
+.pieceList {
+  color: #5ab9a1;
   font-weight: bold;
 }

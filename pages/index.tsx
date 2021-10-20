@@ -6,7 +6,7 @@ import { ShogiTheme } from "../theme";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Shogi Learn - Get Started with Shogi</title>
         <meta
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                 colorScheme="sPink"
                 className={styles.getStarted}
                 onClick={() => {
-                  window.location.assign("/tutorial/pieces");
+                  window.location.assign("./tutorial/pieces");
                 }}
               >
                 <Text fontSize="2xl">Get Started</Text>
