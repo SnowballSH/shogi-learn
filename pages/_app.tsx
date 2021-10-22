@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import "../styles/shogi.scss";
 import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { ShogiTheme } from "../theme";

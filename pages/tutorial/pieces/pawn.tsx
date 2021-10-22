@@ -5,8 +5,6 @@ import styles from "../../../styles/Pieces.module.scss";
 import { ShogiTheme } from "../../../theme";
 import ShogiChessground from "../../../components/shogi";
 
-import "../../../styles/Shogi.module.scss";
-
 const Home: NextPage = () => {
   return (
     <div>
