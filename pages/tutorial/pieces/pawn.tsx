@@ -1,8 +1,11 @@
-import { List, Text, ListItem, Link, Container } from "@chakra-ui/react";
+import { Text, Container, Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../../../styles/Pieces.module.scss";
 import { ShogiTheme } from "../../../theme";
+import ShogiChessground from "../../../components/shogi";
+
+import "../../../styles/Shogi.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +24,9 @@ const Home: NextPage = () => {
           >
             Pawn (歩)
           </Text>
+          <Box>
+            <ShogiChessground />
+          </Box>
         </Container>
       </main>
     </div>

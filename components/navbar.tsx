@@ -40,7 +40,7 @@ export const ShogiMenu: FunctionComponent = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <Box boxShadow="md" p="1">
       <Flex
         as="nav"
         align="center"
@@ -50,7 +50,13 @@ export const ShogiMenu: FunctionComponent = (props) => {
         padding="1rem 3rem"
         {...props}
       >
-        <Logo w="200px" />
+        <Logo
+          w="150px"
+          onClick={() => {
+            window.location.assign("/");
+          }}
+          _hover={{ cursor: "pointer" }}
+        />
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <Box
           display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -68,6 +74,6 @@ export const ShogiMenu: FunctionComponent = (props) => {
           </Stack>
         </Box>
       </Flex>
-    </div>
+    </Box>
   );
 };

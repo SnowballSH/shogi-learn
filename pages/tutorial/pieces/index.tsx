@@ -38,7 +38,15 @@ const Home: NextPage = () => {
             They are:
           </Text>
 
-          <List spacing={3} margin="2rem" className={styles.pieceList}>
+          <List
+            boxShadow="md"
+            rounded="md"
+            w="80%"
+            p={8}
+            spacing={3}
+            margin="2rem"
+            className={styles.pieceList}
+          >
             <ListItem>
               <Link href="./pieces/king">
                 <Text fontSize="3xl">
