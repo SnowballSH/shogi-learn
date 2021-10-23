@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Chessground, Chessground as ChessgroundApi } from "chessgroundx";
+import { Chessground as ChessgroundApi } from "chessgroundx";
 
 import { Api } from "chessgroundx/api";
 import { Config } from "chessgroundx/config";
 
 export const DefaultConfig: Config = {
-  variant: "shogi",
   fen: "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
 };
 
@@ -17,8 +16,8 @@ interface Props {
 }
 
 function ShogiChessground({
-  width = 500,
-  height = 500,
+  width = 450,
+  height = 450,
   config = DefaultConfig,
   contained = false,
 }: Props) {
@@ -31,10 +30,10 @@ function ShogiChessground({
       const chessgroundApi = ChessgroundApi(ref.current, {
         animation: { enabled: true, duration: 200 },
         ...config,
+        variant: "shogi",
       });
       chessgroundApi.state.dimensions = { width: 9, height: 9 };
       chessgroundApi.state.geometry = 1;
-      chessgroundApi.redrawAll();
       setApi(chessgroundApi);
     } else if (ref && ref.current && api) {
       api.set(config);

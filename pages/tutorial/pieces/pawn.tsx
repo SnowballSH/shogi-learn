@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             Pawn (歩)
           </Text>
           <Box>
-            <ShogiChessground />
+            <ShogiChessground config={{ fen: "9/9/9/9/9/9/4P4/9/9 w - 1" }} />
           </Box>
         </Container>
       </main>
