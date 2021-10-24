@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $p-base: "https://github.com/gbtami/pychess-variants/raw/master/static/images/pieces/shogi/ctk/";
 
 @function purl($name) {
@@ -147,7 +149,7 @@ cg-board square.current-premove {
     position: absolute;
     top: 0;
     left: 0;
-    width: (52.172% / 60) * 11.1111;
+    width: math.div(52.172%, 60) * 11.1111;
     height: 11.1111%;
     background-size: cover;
     z-index: 2;

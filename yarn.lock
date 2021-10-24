@@ -3634,6 +3634,11 @@ shell-quote@1.7.2:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
+shogi.js@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/shogi.js/-/shogi.js-2.0.4.tgz#ef672d57922afa69d92047c7e477f372859f4d64"
+  integrity sha512-mzmmOMTSS3hwtiQmoYst/E/8p59/AGT7ITjblsd3+JYubUhV/+ZH+Jwy6nww3w6rVO+jWIh6ytVuwgQYtiatOQ==
+
 side-channel@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"

@@ -12,7 +12,7 @@ import Head from "next/head";
 import styles from "../../../styles/Pieces.module.scss";
 import { ShogiTheme } from "../../../theme";
 
-const Home: NextPage = () => {
+const PieceIndex: NextPage = () => {
   return (
     <div>
       <Head>
@@ -117,4 +117,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default PieceIndex;
