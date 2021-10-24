@@ -1,4 +1,4 @@
-import { Text, Container, Box } from "@chakra-ui/react";
+import { Text, Container } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../../../styles/Pieces.module.scss";
@@ -120,8 +120,8 @@ const Pawn: NextPage = () => {
 
             <Container maxW="container.md" pt={4} pb={10} centerContent>
               <Text fontSize="3xl">
-                Pawns move <b>one</b> square forward. It captures opponent
-                pieces in front of it.
+                Pawns move <b>one</b> square forward. It captures enemy pieces
+                in front of it.
               </Text>
               <Text fontSize="3xl">
                 However, if your own piece (as in the red example) is in front
