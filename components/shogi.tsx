@@ -3,7 +3,7 @@ import { Chessground as ChessgroundApi } from "chessgroundx";
 
 import { Api } from "chessgroundx/api";
 import { Config } from "chessgroundx/config";
-import { Dests } from "chessgroundx/types";
+import { Box, Container } from "@chakra-ui/layout";
 
 export const DefaultConfig: Config = {
   fen: "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
@@ -13,15 +13,17 @@ interface Props {
   width?: number | string;
   height?: number | string;
   contained?: boolean;
+  nopocket?: boolean;
   config?: Partial<Config>;
   after?: (api: Api) => (orig: string, dest: string) => void;
 }
 
 function ShogiChessground({
-  width = "clamp(300px, 37vw, 500px)",
-  height = "clamp(300px, 37vw, 500px)",
+  width = "clamp(200px, 37vw, 500px)",
+  height = "clamp(200px, 37vw, 500px)",
   config = DefaultConfig,
   contained = false,
+  nopocket = false,
   after,
 }: Props) {
   const [api, setApi] = useState<Api | null>(null);
@@ -59,17 +61,50 @@ function ShogiChessground({
   }, [api, config]);
 
   return (
-    <div
-      style={{
-        height: contained ? "100%" : height,
-        width: contained ? "100%" : width,
-      }}
+    <Container
+      centerContent
+      maxW="max-content"
+      display={!nopocket ? "grid" : "block"}
+      gridTemplateColumns="4fr 2fr"
+      gridTemplateRows="1fr 1fr"
+      gridGap="10px"
+      gridTemplateAreas={'"gbd gep" "gbd gap"'}
     >
-      <div
-        ref={ref}
-        style={{ height: "100%", width: "100%", display: "table" }}
-      />
-    </div>
+      <Container
+        w={contained ? "100%" : width}
+        h={contained ? "100%" : height}
+        centerContent
+        p={0}
+        gridArea="gbd"
+      >
+        <Box
+          ref={ref}
+          style={{ height: "100%", width: "100%", display: "table" }}
+        />
+      </Container>
+      {!nopocket && (
+        <>
+          <Box className="enemy pocket">
+            <div className="P"></div>
+            <div className="N"></div>
+            <div className="L"></div>
+            <div className="G"></div>
+            <div className="S"></div>
+            <div className="R"></div>
+            <div className="B"></div>
+          </Box>
+          <Box className="ally pocket">
+            <div className="P"></div>
+            <div className="N"></div>
+            <div className="L"></div>
+            <div className="G"></div>
+            <div className="S"></div>
+            <div className="R"></div>
+            <div className="B"></div>
+          </Box>
+        </>
+      )}
+    </Container>
   );
 }
 

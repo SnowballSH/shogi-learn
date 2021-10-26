@@ -128,9 +128,10 @@ const Pawn: NextPage = () => {
                 of the pawn, it cannot advance.
               </Text>
             </Container>
-            <Container centerContent>
+            <Container maxW="fit-content" centerContent>
               <ShogiChessground
                 config={CFG}
+                nopocket
                 after={(api) => (orig, dest) => {
                   const ox = orig.charCodeAt(0) - "a".charCodeAt(0) + 1;
                   const oy = parseInt(orig.charAt(1));

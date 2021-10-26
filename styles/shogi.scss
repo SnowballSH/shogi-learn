@@ -6,65 +6,152 @@ $p-base: "https://github.com/gbtami/pychess-variants/raw/master/static/images/pi
   @return url($p-base + $name + ".svg");
 }
 
-// pieces
-.cg-wrap piece {
+.pocket {
+  border-radius: 3px;
+  padding: 10px;
+  aspect-ratio: 1;
+
+  div {
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    opacity: 0.2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.enemy {
+    grid-area: gep;
+    background-color: rgb(235, 184, 118);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". R R . . B B ."
+      ". G G . . S S ."
+      "P P . N N . L L";
+  }
+
   &.ally {
-    &.p-piece {
+    grid-area: gap;
+    background-color: rgb(130, 118, 235);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "P P . N N . L L"
+      ". G G . . S S ."
+      ". R R . . B B .";
+  }
+}
+
+.P {
+  grid-area: P;
+}
+.N {
+  grid-area: N;
+}
+.L {
+  grid-area: L;
+}
+.G {
+  grid-area: G;
+}
+.S {
+  grid-area: S;
+}
+.R {
+  grid-area: R;
+}
+.B {
+  grid-area: B;
+}
+
+// pieces
+.pocket,
+.cg-wrap piece {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 3px -1px;
+
+  &.ally {
+    &.p-piece,
+    .P {
       background-image: purl("0FUKyoto");
     }
-    &.s-piece {
+    &.s-piece,
+    .S {
       background-image: purl("0GI");
     }
-    &.g-piece {
+    &.g-piece,
+    .G {
       background-image: purl("0KI");
     }
-    &.b-piece {
+    &.b-piece,
+    .B {
       background-image: purl("0KA");
     }
-    &.n-piece {
+    &.n-piece,
+    .N {
       background-image: purl("0KE");
     }
-    &.l-piece {
+    &.l-piece,
+    .L {
       background-image: purl("0KY");
     }
-    &.r-piece {
+    &.r-piece,
+    .R {
       background-image: purl("0HI");
     }
-    &.k-piece {
+    &.k-piece,
+    .K {
       background-image: purl("0OU");
     }
   }
 
   &.enemy {
-    &.p-piece {
+    &.p-piece,
+    .P {
       background-image: purl("1FUKyoto");
     }
-    &.s-piece {
+    &.s-piece,
+    .S {
       background-image: purl("1GI");
     }
-    &.g-piece {
+    &.g-piece,
+    .G {
       background-image: purl("1KI");
     }
-    &.b-piece {
+    &.b-piece,
+    .B {
       background-image: purl("1KA");
     }
-    &.n-piece {
+    &.n-piece,
+    .N {
       background-image: purl("1KE");
     }
-    &.l-piece {
+    &.l-piece,
+    .L {
       background-image: purl("1KY");
     }
-    &.r-piece {
+    &.r-piece,
+    .R {
       background-image: purl("1HI");
     }
-    &.k-piece {
+    &.k-piece,
+    .K {
       background-image: purl("1OU");
     }
   }
 }
 
 // board
-/** Colored board squares as an embedded SVG */
 cg-board {
   background-image: url("https://lishogi1.org/assets/_tuyzL5/images/board/wood1.png");
 }
