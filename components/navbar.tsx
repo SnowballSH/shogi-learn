@@ -72,6 +72,7 @@ export const ShogiMenu: FunctionComponent = (props) => {
             <MenuItem>Home</MenuItem>
             <MenuItem to="/tutorial/board">Board</MenuItem>
             <MenuItem to="/tutorial/pieces">Pieces</MenuItem>
+            <MenuItem to="/analysis">Analysis</MenuItem>
           </Stack>
         </Box>
       </Flex>

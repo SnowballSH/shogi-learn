@@ -3,46 +3,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../../../styles/Pieces.module.scss";
 import { ShogiTheme } from "../../../theme";
-import ShogiChessground from "../../../components/shogi";
-import { Color, Shogi } from "shogi.js";
-import { useState } from "react";
-import { Dests } from "chessgroundx/types";
 import { Config } from "chessgroundx/config";
-import { toKey } from "../../../utils/shogiUtils";
+import ShogiWithLogic from "../../../components/shogilogic";
 
 const Pawn: NextPage = () => {
   const FEN = "9/9/9/4p4/6p2/2p3N2/2P1P1Pp1/6p2/9 b - 1";
 
-  const [sstate, setSstate] = useState(new Shogi());
-  sstate.initializeFromSFENString(FEN);
-  sstate.editMode(true);
-
-  function getDests(): Dests {
-    let d = new Map();
-    for (let i = 1; i < 10; i++) {
-      for (let j = 1; j < 10; j++) {
-        const ms = sstate.getMovesFrom(i, j);
-        if (ms.length) {
-          d.set(
-            toKey(i, j),
-            ms.map((m) => toKey(m.to.x, m.to.y))
-          );
-        }
-      }
-    }
-    return d;
-  }
-
   const CFG: Config = {
-    fen: FEN,
-    movable: {
-      color: "white",
-      free: false,
-      dests: getDests(),
-    },
-    draggable: {
-      showGhost: true,
-    },
     drawable: {
       autoShapes: [
         {
@@ -129,26 +96,7 @@ const Pawn: NextPage = () => {
               </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
-              <ShogiChessground
-                config={CFG}
-                nopocket
-                after={(api) => (orig, dest) => {
-                  const ox = orig.charCodeAt(0) - "a".charCodeAt(0) + 1;
-                  const oy = parseInt(orig.charAt(1));
-                  const dx = dest.charCodeAt(0) - "a".charCodeAt(0) + 1;
-                  const dy = parseInt(dest.charAt(1));
-                  sstate.move(10 - ox, 10 - oy, 10 - dx, 10 - dy);
-                  // reverse color because shogi.js starts with black...
-                  const color = sstate.turn == Color.Black ? "white" : "black";
-                  api.set({
-                    turnColor: color,
-                    movable: {
-                      dests: getDests(),
-                      color: color,
-                    },
-                  });
-                }}
-              />
+              <ShogiWithLogic editable fen={FEN} config={CFG} />
             </Container>
           </Container>
         </Container>
