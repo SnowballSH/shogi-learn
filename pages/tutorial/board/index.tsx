@@ -1,4 +1,4 @@
-import { Text, Container } from "@chakra-ui/react";
+import { Text, Container, Link } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
@@ -81,6 +81,12 @@ const BoardIndex: NextPage = () => {
             />
             <Text>Classical Komodai</Text>
           </Container>
+
+          <br />
+
+          <Link href="/tutorial/pieces">
+            <Text fontSize="3xl">Next up: Pieces</Text>
+          </Link>
         </Container>
       </main>
     </div>

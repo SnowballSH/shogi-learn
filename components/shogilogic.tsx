@@ -60,6 +60,7 @@ function ShogiWithLogic({
           width={width}
           height={height}
           config={{ ...config, ...CFG }}
+          nopocket={editable}
           after={(api) => (orig, dest) => {
             const ox = orig.charCodeAt(0) - "a".charCodeAt(0) + 1;
             const oy = parseInt(orig.charAt(1));
