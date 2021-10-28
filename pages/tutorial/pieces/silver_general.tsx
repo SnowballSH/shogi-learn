@@ -6,8 +6,8 @@ import { ShogiTheme } from "../../../theme";
 import { Config } from "chessgroundx/config";
 import ShogiWithLogic from "../../../components/shogilogic";
 
-const GoldGeneral: NextPage = () => {
-  const FEN = "9/9/9/9/4L4/3ppp3/3pGp3/3ppp3/9 b - 1";
+const SilverGeneral: NextPage = () => {
+  const FEN = "9/9/9/9/4L4/3ppp3/3pSp3/3ppp3/9 b - 1";
 
   const CFG: Config = {
     drawable: {
@@ -25,27 +25,27 @@ const GoldGeneral: NextPage = () => {
         {
           orig: "e3",
           dest: "f3",
-          brush: "green",
+          brush: "red",
         },
         {
           orig: "e3",
           dest: "f2",
-          brush: "red",
+          brush: "green",
         },
         {
           orig: "e3",
           dest: "e2",
-          brush: "green",
-        },
-        {
-          orig: "e3",
-          dest: "d2",
           brush: "red",
         },
         {
           orig: "e3",
-          dest: "d3",
+          dest: "d2",
           brush: "green",
+        },
+        {
+          orig: "e3",
+          dest: "d3",
+          brush: "red",
         },
         {
           orig: "e3",
@@ -64,8 +64,8 @@ const GoldGeneral: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Shogi Learn - Gold Generals</title>
-        <meta name="description" content="Shogi Gold Generals" />
+        <title>Shogi Learn - Silver Generals</title>
+        <meta name="description" content="Shogi Silver Generals" />
       </Head>
 
       <main className={styles.main}>
@@ -75,7 +75,7 @@ const GoldGeneral: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Gold General (金)
+            Silver General (銀)
           </Text>
 
           <Container
@@ -95,11 +95,10 @@ const GoldGeneral: NextPage = () => {
 
             <Container maxW="container.md" pt={4} pb={10} centerContent>
               <Text fontSize="3xl">
-                Gold generals move in any direction{" "}
-                <b>except diagonally back</b>.
+                Silver Generals move one square diagonally or one square forward.
               </Text>
               <Text fontSize="3xl">
-                Gold generals cannot capture ally pieces.
+                Silver generals cannot capture ally pieces.
               </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
@@ -112,4 +111,4 @@ const GoldGeneral: NextPage = () => {
   );
 };
 
-export default GoldGeneral;
+export default SilverGeneral;
