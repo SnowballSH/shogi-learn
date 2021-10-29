@@ -1411,9 +1411,10 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-"chessgroundx@https://github.com/SnowballSH/chessgroundx":
-  version "9.0.2"
-  resolved "https://github.com/SnowballSH/chessgroundx#26e56a5db880d935b6bed1f1e227faffe37639db"
+chessgroundx@9.0.3:
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/chessgroundx/-/chessgroundx-9.0.3.tgz#4829634855bc5db72dfea389df3dd9ada0be2780"
+  integrity sha512-vIBHhp71slWupAjmgTCB4MPW9MGo7TgeY0TFqIYAyTq+KOqEkyc9WFLlI1L182S3wGwvYohpT6magrLcTjWGcQ==
 
 chokidar@3.5.1:
   version "3.5.1"

@@ -4,6 +4,7 @@ import { Chessground as ChessgroundApi } from "chessgroundx";
 import { Api } from "chessgroundx/api";
 import { Config } from "chessgroundx/config";
 import { Box, Container } from "@chakra-ui/layout";
+import * as cg from "chessgroundx/types";
 
 export const DefaultConfig: Config = {
   fen: "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
@@ -37,9 +38,8 @@ function ShogiChessground({
         ...config,
         variant: "shogi",
         coordinates: false,
+        geometry: 1,
       });
-      chessgroundApi.state.dimensions = { width: 9, height: 9 };
-      chessgroundApi.state.geometry = 1;
       setApi(chessgroundApi);
     } else if (ref && ref.current && api) {
       api.set(config);
