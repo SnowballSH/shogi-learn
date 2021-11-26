@@ -79,6 +79,11 @@ const Knight: NextPage = () => {
                 Knights cannot capture ally pieces at destination square. They
                 may jump over the piece in front of it.
               </Text>
+              <br />
+              <Text fontSize="3xl">
+                Knights <b>may NOT</b> be dropped on the 9th or 8th rank since
+                it will then have no legal movements and become {'"dead"'}.
+              </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
               <ShogiWithLogic editable fen={FEN} config={CFG} />

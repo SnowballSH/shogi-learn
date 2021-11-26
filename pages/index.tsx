@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                 colorScheme="sPink"
                 className={styles.getStarted}
                 onClick={() => {
-                  window.location.assign("./tutorial/board");
+                  window.location.assign("./tutorial/about");
                 }}
               >
                 <Text fontSize="2xl">Get Started</Text>

@@ -7,6 +7,8 @@ const AnalysisPage: NextPage = () => {
     <Box>
       <Container maxW="fit-content" centerContent p={6}>
         <ShogiWithLogic />
+        <i>Drop function not completed yet.</i>
+        <i>Right click to draw circles, right drag to draw rays.</i>
       </Container>
     </Box>
   );

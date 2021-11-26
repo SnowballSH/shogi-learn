@@ -92,8 +92,6 @@ const PieceIndex: NextPage = () => {
                 <Text fontSize="3xl">
                   <ListIcon as={ArrowForwardIcon} />1 Bishop (角)
                 </Text>
-                <br />
-                <i>(Webpage not finished)</i>
               </Link>
             </ListItem>
 
@@ -102,8 +100,6 @@ const PieceIndex: NextPage = () => {
                 <Text fontSize="3xl">
                   <ListIcon as={ArrowForwardIcon} />1 Rook (飛)
                 </Text>
-                <br />
-                <i>(Webpage not finished)</i>
               </Link>
             </ListItem>
 

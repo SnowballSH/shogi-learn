@@ -6,48 +6,31 @@ import { ShogiTheme } from "../../../theme";
 import { Config } from "chessgroundx/config";
 import ShogiWithLogic from "../../../components/shogilogic";
 
-const Pawn: NextPage = () => {
-  const FEN = "9/9/9/4p4/6p2/2p3N2/2P1P1Pp1/6p2/9 b - 1";
+const Bishop: NextPage = () => {
+  const FEN = "9/9/2g6/9/4B4/9/9/7G1/9 b - 1";
 
   const CFG: Config = {
     drawable: {
       autoShapes: [
         {
-          orig: "c3",
-          dest: "c4",
-          brush: "green",
-        },
-        {
-          orig: "c4",
-          brush: "green",
-        },
-        {
-          orig: "e3",
-          dest: "e4",
-          brush: "green",
-        },
-        {
-          orig: "e4",
-          dest: "e5",
+          orig: "e5",
+          dest: "c7",
           brush: "green",
         },
         {
           orig: "e5",
-          dest: "e6",
+          dest: "i9",
           brush: "green",
         },
         {
-          orig: "e6",
+          orig: "e5",
+          dest: "a1",
           brush: "green",
         },
         {
-          orig: "g3",
-          dest: "g4",
-          brush: "red",
-        },
-        {
-          orig: "g4",
-          brush: "red",
+          orig: "e5",
+          dest: "g3",
+          brush: "green",
         },
       ],
     },
@@ -56,8 +39,8 @@ const Pawn: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Shogi Learn - Pawns</title>
-        <meta name="description" content="Shogi Pawns" />
+        <title>Shogi Learn - Bishops</title>
+        <meta name="description" content="Shogi Bishops" />
       </Head>
 
       <main className={styles.main}>
@@ -67,7 +50,7 @@ const Pawn: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Pawn (歩)
+            Bishop (角)
           </Text>
 
           <Container
@@ -87,17 +70,14 @@ const Pawn: NextPage = () => {
 
             <Container maxW="container.md" pt={4} pb={10} centerContent>
               <Text fontSize="3xl">
-                Pawns move <b>one</b> square forward. It captures enemy pieces
-                in front of it.
+                Bishops move exactly like bishops in Western Chess. You probably
+                already know how to use it. If not,
               </Text>
               <Text fontSize="3xl">
-                However, if your own piece (as in the red example) is in front
-                of the pawn, it cannot advance.
+                Bishops move and capture diagonally any amount of squares.
               </Text>
-              <br />
               <Text fontSize="3xl">
-                Pawns <b>may NOT</b> be dropped on the 9th rank since it will
-                then have no legal movements and become {'"dead"'}.
+                Bishops are the second most powerful pieces on a Shogi board.
               </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
@@ -110,4 +90,4 @@ const Pawn: NextPage = () => {
   );
 };
 
-export default Pawn;
+export default Bishop;

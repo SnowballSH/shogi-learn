@@ -113,6 +113,30 @@ $p-base: "https://github.com/gbtami/pychess-variants/raw/master/static/images/pi
     .K {
       background-image: purl("0OU");
     }
+
+    &.pr-piece {
+      background-image: purl("0RY");
+    }
+
+    &.pb-piece {
+      background-image: purl("0UM");
+    }
+
+    &.pp-piece {
+      background-image: purl("0TO");
+    }
+
+    &.ps-piece {
+      background-image: purl("0NG");
+    }
+
+    &.pl-piece {
+      background-image: purl("0NY");
+    }
+
+    &.pn-piece {
+      background-image: purl("0NK");
+    }
   }
 
   &.enemy {
@@ -147,6 +171,30 @@ $p-base: "https://github.com/gbtami/pychess-variants/raw/master/static/images/pi
     &.k-piece,
     .K {
       background-image: purl("1OU");
+    }
+
+    &.pr-piece {
+      background-image: purl("1RY");
+    }
+
+    &.pb-piece {
+      background-image: purl("1UM");
+    }
+
+    &.pp-piece {
+      background-image: purl("1TO");
+    }
+
+    &.ps-piece {
+      background-image: purl("1NG");
+    }
+
+    &.pl-piece {
+      background-image: purl("1NY");
+    }
+
+    &.pn-piece {
+      background-image: purl("1NK");
     }
   }
 }

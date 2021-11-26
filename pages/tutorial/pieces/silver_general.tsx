@@ -95,7 +95,8 @@ const SilverGeneral: NextPage = () => {
 
             <Container maxW="container.md" pt={4} pb={10} centerContent>
               <Text fontSize="3xl">
-                Silver Generals move one square diagonally or one square forward.
+                Silver Generals move one square diagonally or one square
+                forward.
               </Text>
               <Text fontSize="3xl">
                 Silver generals cannot capture ally pieces.

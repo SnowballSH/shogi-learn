@@ -73,7 +73,13 @@ const Lance: NextPage = () => {
                 Lances move any amount of squares forward (toward enemy).
               </Text>
               <Text fontSize="3xl">
-                Lances cannot capture ally pieces and cannot jump over any piece.
+                Lances cannot capture ally pieces and cannot jump over any
+                piece.
+              </Text>
+              <br />
+              <Text fontSize="3xl">
+                Lances <b>may NOT</b> be dropped on the 9th rank since it will
+                then have no legal movements and become {'"dead"'}.
               </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
