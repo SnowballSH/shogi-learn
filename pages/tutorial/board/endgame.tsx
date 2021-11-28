@@ -17,8 +17,8 @@ const Endgame: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Shogi Learn - Board</title>
-        <meta name="description" content="Shogi Board" />
+        <title>Shogi Learn - Endgame</title>
+        <meta name="description" content="Shogi Endgame" />
       </Head>
 
       <main className={styles.main}>

@@ -111,6 +111,12 @@ const PieceIndex: NextPage = () => {
               </Link>
             </ListItem>
           </List>
+
+          <Link href="/tutorial/pieces/promotion">
+            <Text fontSize="3xl">
+              Next up (after you read all the links above): Promotion
+            </Text>
+          </Link>
         </Container>
       </main>
     </div>

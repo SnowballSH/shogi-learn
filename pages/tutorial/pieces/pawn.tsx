@@ -99,6 +99,16 @@ const Pawn: NextPage = () => {
                 Pawns <b>may NOT</b> be dropped on the 9th rank since it will
                 then have no legal movements and become {'"dead"'}.
               </Text>
+              <br />
+              <Text fontSize="3xl">
+                Pawns also <b>may NOT</b> be dropped if there is another pawn on
+                the same file. (It will then cause doubled pawns)
+              </Text>
+              <br />
+              <Text fontSize="3xl">
+                You CANNOT checkmate with a dropped pawn. Delivering checkmate
+                with dropping pawn is illegal move.
+              </Text>
             </Container>
             <Container maxW="fit-content" centerContent>
               <ShogiWithLogic editable fen={FEN} config={CFG} />
