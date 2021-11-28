@@ -35,7 +35,7 @@ export const MenuItem: FunctionComponent<{
 };
 
 export const ShogiMenu: FunctionComponent = (props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
