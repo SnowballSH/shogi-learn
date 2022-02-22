@@ -75,7 +75,7 @@ const SilverGeneral: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Silver General (銀)
+            Silver General  (ginshō, 銀將)
           </Text>
 
           <Container

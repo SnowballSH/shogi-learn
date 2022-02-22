@@ -75,6 +75,7 @@ export const ShogiMenu: FunctionComponent = (props) => {
             <MenuItem to="/tutorial/pieces">Pieces</MenuItem>
             <MenuItem to="/tutorial/pieces/promotion">Promotion rules</MenuItem>
             <MenuItem to="/tutorial/board/endgame">Endgame</MenuItem>
+            <MenuItem to="https://lishogi.org">lishogi.org</MenuItem>
             <MenuItem to="/analysis">Analysis</MenuItem>
           </Stack>
         </Box>

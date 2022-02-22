@@ -50,7 +50,7 @@ const Bishop: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Bishop (角)
+            Bishop (kakugyō, 角行)
           </Text>
 
           <Container

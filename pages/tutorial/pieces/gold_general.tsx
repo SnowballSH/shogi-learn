@@ -75,7 +75,7 @@ const GoldGeneral: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Gold General (金)
+            Gold General (kinshō, 金將)
           </Text>
 
           <Container

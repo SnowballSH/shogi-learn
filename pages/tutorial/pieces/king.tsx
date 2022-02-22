@@ -85,6 +85,14 @@ const King: NextPage = () => {
             backgroundColor="#f3ffe0"
             rounded="lg"
           >
+            <Container maxW="container.md" pt={4} pb={10} centerContent>
+              <Text fontSize="3xl">
+                The king of the stronger player is called ōshō (王將), while the weaker player is called gyokushō (玉將).
+              </Text>
+            </Container>
+
+            <br />
+
             <Text
               fontSize="5xl"
               fontWeight="bold"

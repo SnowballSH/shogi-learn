@@ -50,7 +50,7 @@ const Lance: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Lance (香)
+            Lance (kyōsha, 香車)
           </Text>
 
           <Container

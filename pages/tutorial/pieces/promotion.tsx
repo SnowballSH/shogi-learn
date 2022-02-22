@@ -92,7 +92,7 @@ const Promotion: NextPage = () => {
                 Rook
               </Text>
               <Text fontSize="2xl" p={5}>
-                Rooks (hisha 飛) promote to{" "}
+                Rooks (hisha 飛車) promote to{" "}
                 <b>
                   {'"'}Dragon King{'"'} ryūō 龍王
                 </b>

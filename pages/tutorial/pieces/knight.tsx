@@ -50,7 +50,7 @@ const Knight: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Knight (桂)
+            Knight (keima, 桂馬)
           </Text>
 
           <Container

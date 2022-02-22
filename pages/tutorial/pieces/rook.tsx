@@ -50,7 +50,7 @@ const Rook: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Rook (飛)
+            Rook (hisha, 飛車)
           </Text>
 
           <Container

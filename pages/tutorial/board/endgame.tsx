@@ -133,7 +133,7 @@ const Endgame: NextPage = () => {
                 If the same position and same pieces in pockets occurs 4 times,
                 the game immediately ends in a draw by repetition.
                 <br />
-                Note that the position cannot be a check, since perpetual check
+                Note that the position cannot be a check, since perpetual check (千日手 sennichite, lit. "moves for a thousand days")
                 is not allowed in Shogi.
               </Text>
             </ListItem>

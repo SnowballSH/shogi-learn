@@ -67,7 +67,7 @@ const Pawn: NextPage = () => {
             color={ShogiTheme.colors["sPink"][400]}
             className={styles.pieceTitle}
           >
-            Pawn (歩)
+            Pawn (fuhyō, 歩兵)
           </Text>
 
           <Container

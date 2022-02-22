@@ -34,6 +34,12 @@ const About: NextPage = () => {
           <br />
 
           <Text fontSize="3xl" className={styles.aboutIntro}>
+            Shogi existed as early as the 16th century, and was a variation of a game invented as early as in the 12th century.
+          </Text>
+
+          <br />
+
+          <Text fontSize="3xl" className={styles.aboutIntro}>
             The Major difference between Shogi and Western Chess is that in
             Shogi, captured pieces become <b>yours</b> to use.
             <br />
